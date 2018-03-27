@@ -1,7 +1,9 @@
 def my_each(array)
   if block_given?
-    for i in (0..array.length - 1)
-      yield(i)
+    i = 0
+    while i < array.length
+      yield(array[i])
+      i = i + 1
     end
     array
   end
